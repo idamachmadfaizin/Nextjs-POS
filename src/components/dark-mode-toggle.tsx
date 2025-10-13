@@ -1,15 +1,24 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import * as React from "react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { ReactElement, useCallback, useEffect, useState } from "react";
 
 export function DarkModeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const updateTheme = React.useCallback(() => {
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const updateTheme = useCallback(() => {
     switch (theme) {
       case "system":
         setTheme("light");
@@ -18,7 +27,7 @@ export function DarkModeToggle() {
         setTheme("dark");
         break;
       case "dark":
-        setTheme("system");
+        setTheme("light");
         break;
       default:
         setTheme("system");
@@ -26,27 +35,37 @@ export function DarkModeToggle() {
     }
   }, [setTheme, theme]);
 
-  const iconMap: Record<string, React.ReactElement> = {
+  const iconMap: Record<string, ReactElement> = {
     system: <Sun />,
     light: <Moon />,
-    dark: <Monitor />,
+    dark: <Sun />,
   };
 
   const textMap: Record<string, string> = {
     system: "light",
     light: "dark",
-    dark: "system",
+    dark: "light",
   };
+
+  if (!mounted) {
+    return (
+      <Button variant="ghost" size="icon">
+        <Monitor />
+      </Button>
+    );
+  }
+
+  const current = resolvedTheme ?? "system";
 
   return (
     <Tooltip>
       <TooltipTrigger asChild>
         <Button variant="ghost" size="icon" onClick={updateTheme}>
-          {iconMap[theme ?? "system"] ?? iconMap.dark}
+          {iconMap[current]}
         </Button>
       </TooltipTrigger>
       <TooltipContent>
-        <p>Change to {textMap[theme ?? "system"] ?? textMap.dark}</p>
+        <p>Change to {textMap[current]}</p>
       </TooltipContent>
     </Tooltip>
   );
