@@ -24,7 +24,7 @@ export function DarkModeToggle() {
         setTheme("system");
         break;
     }
-  }, [theme]);
+  }, [setTheme, theme]);
 
   const iconMap: Record<string, React.ReactElement> = {
     system: <Sun />,

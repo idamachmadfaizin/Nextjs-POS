@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <SectionCards />
-      <div className="px-4 lg:px-6">
+      <div className="dashboard-main">
         <ChartAreaInteractive />
       </div>
       <DataTable data={data} />
