@@ -1,6 +1,10 @@
-import { GalleryVerticalEnd } from "lucide-react"
+import { LoginForm } from "@/components/login-form";
+import { GalleryVerticalEnd } from "lucide-react";
+import { Metadata } from "next";
 
-import { LoginForm } from "@/components/login-form"
+export const metadata: Metadata = {
+  title: "Login - Kntl Inc",
+};
 
 export default function LoginPage() {
   return (
@@ -15,5 +19,5 @@ export default function LoginPage() {
         <LoginForm />
       </div>
     </div>
-  )
+  );
 }
