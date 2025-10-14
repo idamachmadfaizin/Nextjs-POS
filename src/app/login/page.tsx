@@ -3,7 +3,7 @@ import { GalleryVerticalEnd } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Login - Kntl Inc",
+  title: `Login - ${process.env.NEXT_PUBLIC_APP_NAME}`,
 };
 
 export default function LoginPage() {
@@ -14,7 +14,7 @@ export default function LoginPage() {
           <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
             <GalleryVerticalEnd className="size-4" />
           </div>
-          Kntl Inc.
+          {process.env.NEXT_PUBLIC_APP_NAME}.
         </a>
         <LoginForm />
       </div>
