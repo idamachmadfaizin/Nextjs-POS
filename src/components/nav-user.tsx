@@ -1,11 +1,3 @@
-import {
-  IconCreditCard,
-  IconDotsVertical,
-  IconLogout,
-  IconNotification,
-  IconUserCircle,
-} from "@tabler/icons-react";
-
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -22,6 +14,13 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import {
+  LucideBell,
+  LucideCircleUserRound,
+  LucideCreditCard,
+  LucideEllipsisVertical,
+  LucideLogOut,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
 
@@ -75,7 +74,7 @@ export function NavUser({
                   {user.email}
                 </span>
               </div>
-              <IconDotsVertical className="ml-auto size-4" />
+              <LucideEllipsisVertical className="ml-auto size-4" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -101,21 +100,21 @@ export function NavUser({
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
-                <IconUserCircle />
+                <LucideCircleUserRound />
                 Account
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <IconCreditCard />
+                <LucideCreditCard />
                 Billing
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <IconNotification />
+                <LucideBell />
                 Notifications
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={() => router.push("/login")}>
-              <IconLogout />
+              <LucideLogOut />
               Log out
             </DropdownMenuItem>
           </DropdownMenuContent>

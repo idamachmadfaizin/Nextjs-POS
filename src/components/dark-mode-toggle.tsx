@@ -6,7 +6,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Monitor, Moon, Sun } from "lucide-react";
+import { LucideMonitor, LucideMoon, LucideSun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { ReactElement, useCallback, useEffect, useState } from "react";
 
@@ -36,9 +36,9 @@ export function DarkModeToggle() {
   }, [setTheme, theme]);
 
   const iconMap: Record<string, ReactElement> = {
-    system: <Sun />,
-    light: <Moon />,
-    dark: <Sun />,
+    system: <LucideSun />,
+    light: <LucideMoon />,
+    dark: <LucideSun />,
   };
 
   const textMap: Record<string, string> = {
@@ -50,7 +50,7 @@ export function DarkModeToggle() {
   if (!mounted) {
     return (
       <Button variant="ghost" size="icon">
-        <Monitor />
+        <LucideMonitor />
       </Button>
     );
   }
