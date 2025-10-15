@@ -1,4 +1,4 @@
-import { GalleryVerticalEnd } from "lucide-react";
+import { LucideGalleryVerticalEnd } from "lucide-react";
 
 export default function Layout({
   children,
@@ -10,7 +10,7 @@ export default function Layout({
       <div className="flex w-full max-w-sm flex-col gap-6">
         <div className="flex items-center gap-2 self-center font-medium">
           <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
-            <GalleryVerticalEnd className="size-4" />
+            <LucideGalleryVerticalEnd className="size-4" />
           </div>
           {process.env.NEXT_PUBLIC_APP_NAME}.
         </div>
