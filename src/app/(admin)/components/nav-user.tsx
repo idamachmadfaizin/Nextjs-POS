@@ -1,3 +1,13 @@
+import {
+  LucideBell,
+  LucideCircleUserRound,
+  LucideCreditCard,
+  LucideEllipsisVertical,
+  LucideLogOut,
+} from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useMemo } from "react";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -14,15 +24,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import {
-  LucideBell,
-  LucideCircleUserRound,
-  LucideCreditCard,
-  LucideEllipsisVertical,
-  LucideLogOut,
-} from "lucide-react";
-import { useRouter } from "next/navigation";
-import { useMemo } from "react";
 
 export function NavUser({
   user,

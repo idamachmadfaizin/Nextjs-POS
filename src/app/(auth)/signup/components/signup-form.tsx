@@ -1,6 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { Nullable } from "@/types/nullable";
+import Link from "next/link";
+import React from "react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -17,9 +20,7 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
-import { Nullable } from "@/types/nullable";
-import React from "react";
+import { cn } from "@/lib/utils";
 
 export function SignupForm({
   className,
@@ -113,7 +114,7 @@ export function SignupForm({
               <Field>
                 <Button type="submit">Create Account</Button>
                 <FieldDescription className="text-center">
-                  Already have an account? <Link href="login">Sign in</Link>
+                  Already have an account? <Link href="/login">Sign in</Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>

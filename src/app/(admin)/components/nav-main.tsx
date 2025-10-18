@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -8,7 +10,6 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { INavGroup } from "@/types/nav";
-import Link from "next/link";
 
 export function NavMain({ groups }: { groups: INavGroup[] }) {
   return groups.map((group) => (

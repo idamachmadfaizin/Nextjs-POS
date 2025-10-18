@@ -1,5 +1,7 @@
 "use client";
 
+import * as React from "react";
+
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -8,7 +10,6 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { INavItem } from "@/types/nav";
-import * as React from "react";
 
 export function NavSecondary({
   items,

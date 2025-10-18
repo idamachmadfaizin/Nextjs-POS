@@ -1,5 +1,6 @@
-import { LoginForm } from "@/components/login-form";
 import { Metadata } from "next";
+
+import { LoginForm } from "./components/login-form";
 
 export const metadata: Metadata = {
   title: `Login - ${process.env.NEXT_PUBLIC_APP_NAME}`,
