@@ -70,7 +70,7 @@ const data: IData = {
           },
           {
             title: "Categories",
-            href: "#",
+            href: "/categories",
             icon: LucideBlocks,
           },
         ],
