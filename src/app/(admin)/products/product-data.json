@@ -1,0 +1,1002 @@
+[
+    {
+        "category": "ELEKTRONIK",
+        "name": "Accusantium Incidunt",
+        "sku": "SKU-YQL-28127",
+        "stock": 337,
+        "unit": "pak",
+        "initialPrice": 353558,
+        "sellingPrice": 364998,
+        "netProfit": 11440
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Minus Placeat",
+        "sku": "SKU-WZR-73259",
+        "stock": 240,
+        "unit": "pcs",
+        "initialPrice": 449506,
+        "sellingPrice": 489687,
+        "netProfit": 40181
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Excepturi Assumenda",
+        "sku": "SKU-TES-50890",
+        "stock": 84,
+        "unit": "kg",
+        "initialPrice": 390853,
+        "sellingPrice": 430896,
+        "netProfit": 40043
+    },
+    {
+        "category": "UMUM",
+        "name": "Error Sapiente",
+        "sku": "SKU-PJA-23488",
+        "stock": 152,
+        "unit": "dus",
+        "initialPrice": 247143,
+        "sellingPrice": 275400,
+        "netProfit": 28257
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Nihil Voluptates",
+        "sku": "SKU-HRC-66718",
+        "stock": 268,
+        "unit": "dus",
+        "initialPrice": 215225,
+        "sellingPrice": 217078,
+        "netProfit": 1853
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Minus Quaerat",
+        "sku": "SKU-KRW-83716",
+        "stock": 51,
+        "unit": "liter",
+        "initialPrice": 357533,
+        "sellingPrice": 358534,
+        "netProfit": 1001
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Dicta Repellat",
+        "sku": "SKU-EKU-90793",
+        "stock": 445,
+        "unit": "lusin",
+        "initialPrice": 28030,
+        "sellingPrice": 55271,
+        "netProfit": 27241
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Eligendi Doloremque",
+        "sku": "SKU-BRY-19904",
+        "stock": 339,
+        "unit": "pcs",
+        "initialPrice": 314408,
+        "sellingPrice": 346924,
+        "netProfit": 32516
+    },
+    {
+        "category": "UMUM",
+        "name": "Non Dolorum",
+        "sku": "SKU-QVU-17874",
+        "stock": 369,
+        "unit": "dus",
+        "initialPrice": 493854,
+        "sellingPrice": 495134,
+        "netProfit": 1280
+    },
+    {
+        "category": "UMUM",
+        "name": "Iure Reprehenderit",
+        "sku": "SKU-AUM-39068",
+        "stock": 319,
+        "unit": "pcs",
+        "initialPrice": 247202,
+        "sellingPrice": 283164,
+        "netProfit": 35962
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Vitae Possimus",
+        "sku": "SKU-LTZ-64824",
+        "stock": 189,
+        "unit": "kg",
+        "initialPrice": 15149,
+        "sellingPrice": 50368,
+        "netProfit": 35219
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Ipsam Sunt",
+        "sku": "SKU-VJZ-74442",
+        "stock": 405,
+        "unit": "lusin",
+        "initialPrice": 271674,
+        "sellingPrice": 316730,
+        "netProfit": 45056
+    },
+    {
+        "category": "UMUM",
+        "name": "Et Porro",
+        "sku": "SKU-EQO-07292",
+        "stock": 268,
+        "unit": "liter",
+        "initialPrice": 193579,
+        "sellingPrice": 208980,
+        "netProfit": 15401
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Vitae Necessitatibus",
+        "sku": "SKU-HQC-50328",
+        "stock": 282,
+        "unit": "pak",
+        "initialPrice": 112144,
+        "sellingPrice": 120023,
+        "netProfit": 7879
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Mollitia Possimus",
+        "sku": "SKU-CDP-31540",
+        "stock": 209,
+        "unit": "pak",
+        "initialPrice": 476006,
+        "sellingPrice": 525463,
+        "netProfit": 49457
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Est Incidunt",
+        "sku": "SKU-LPJ-22260",
+        "stock": 74,
+        "unit": "dus",
+        "initialPrice": 368898,
+        "sellingPrice": 403825,
+        "netProfit": 34927
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Illo Enim",
+        "sku": "SKU-RBK-04916",
+        "stock": 149,
+        "unit": "pak",
+        "initialPrice": 490517,
+        "sellingPrice": 503228,
+        "netProfit": 12711
+    },
+    {
+        "category": "UMUM",
+        "name": "Dolorem Modi",
+        "sku": "SKU-PCL-96891",
+        "stock": 485,
+        "unit": "liter",
+        "initialPrice": 449529,
+        "sellingPrice": 468584,
+        "netProfit": 19055
+    },
+    {
+        "category": "UMUM",
+        "name": "Facere Quibusdam",
+        "sku": "SKU-QTR-25292",
+        "stock": 349,
+        "unit": "dus",
+        "initialPrice": 353630,
+        "sellingPrice": 400776,
+        "netProfit": 47146
+    },
+    {
+        "category": "UMUM",
+        "name": "Mollitia Aspernatur",
+        "sku": "SKU-GFD-59729",
+        "stock": 36,
+        "unit": "lusin",
+        "initialPrice": 59571,
+        "sellingPrice": 92229,
+        "netProfit": 32658
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Aut Ducimus",
+        "sku": "SKU-TBC-84529",
+        "stock": 264,
+        "unit": "dus",
+        "initialPrice": 313513,
+        "sellingPrice": 324890,
+        "netProfit": 11377
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Consequatur Corporis",
+        "sku": "SKU-GZP-04556",
+        "stock": 126,
+        "unit": "lusin",
+        "initialPrice": 215438,
+        "sellingPrice": 258306,
+        "netProfit": 42868
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Doloribus Facere",
+        "sku": "SKU-SJV-07616",
+        "stock": 379,
+        "unit": "dus",
+        "initialPrice": 26565,
+        "sellingPrice": 68605,
+        "netProfit": 42040
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Neque Aut",
+        "sku": "SKU-RLZ-60312",
+        "stock": 80,
+        "unit": "pcs",
+        "initialPrice": 374766,
+        "sellingPrice": 411870,
+        "netProfit": 37104
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Sed In",
+        "sku": "SKU-LUS-59292",
+        "stock": 110,
+        "unit": "dus",
+        "initialPrice": 348194,
+        "sellingPrice": 380795,
+        "netProfit": 32601
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Perferendis Voluptatum",
+        "sku": "SKU-ISR-01121",
+        "stock": 426,
+        "unit": "kg",
+        "initialPrice": 95145,
+        "sellingPrice": 137527,
+        "netProfit": 42382
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Sit Quos",
+        "sku": "SKU-FWY-79468",
+        "stock": 346,
+        "unit": "pak",
+        "initialPrice": 389121,
+        "sellingPrice": 401084,
+        "netProfit": 11963
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Fugiat Dolore",
+        "sku": "SKU-PAV-64768",
+        "stock": 215,
+        "unit": "dus",
+        "initialPrice": 308155,
+        "sellingPrice": 324144,
+        "netProfit": 15989
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Cum Facilis",
+        "sku": "SKU-ZZL-48330",
+        "stock": 371,
+        "unit": "liter",
+        "initialPrice": 158483,
+        "sellingPrice": 206412,
+        "netProfit": 47929
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Numquam Reprehenderit",
+        "sku": "SKU-UEJ-50485",
+        "stock": 339,
+        "unit": "pcs",
+        "initialPrice": 375549,
+        "sellingPrice": 423381,
+        "netProfit": 47832
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Similique Nihil",
+        "sku": "SKU-MUK-22830",
+        "stock": 110,
+        "unit": "liter",
+        "initialPrice": 494260,
+        "sellingPrice": 525439,
+        "netProfit": 31179
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Minima Ipsum",
+        "sku": "SKU-AUM-30007",
+        "stock": 118,
+        "unit": "pcs",
+        "initialPrice": 31167,
+        "sellingPrice": 53084,
+        "netProfit": 21917
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Tempora Cum",
+        "sku": "SKU-LKN-15452",
+        "stock": 260,
+        "unit": "dus",
+        "initialPrice": 317285,
+        "sellingPrice": 343620,
+        "netProfit": 26335
+    },
+    {
+        "category": "UMUM",
+        "name": "Similique A",
+        "sku": "SKU-MQR-58845",
+        "stock": 83,
+        "unit": "dus",
+        "initialPrice": 480933,
+        "sellingPrice": 499554,
+        "netProfit": 18621
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Nesciunt Cumque",
+        "sku": "SKU-LEL-93241",
+        "stock": 93,
+        "unit": "kg",
+        "initialPrice": 160698,
+        "sellingPrice": 207971,
+        "netProfit": 47273
+    },
+    {
+        "category": "UMUM",
+        "name": "Quo Ipsa",
+        "sku": "SKU-XMR-14730",
+        "stock": 462,
+        "unit": "dus",
+        "initialPrice": 178913,
+        "sellingPrice": 208584,
+        "netProfit": 29671
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Veritatis Minus",
+        "sku": "SKU-KTA-26295",
+        "stock": 241,
+        "unit": "pak",
+        "initialPrice": 114771,
+        "sellingPrice": 128699,
+        "netProfit": 13928
+    },
+    {
+        "category": "UMUM",
+        "name": "Ex Consectetur",
+        "sku": "SKU-MPS-54495",
+        "stock": 133,
+        "unit": "pak",
+        "initialPrice": 372262,
+        "sellingPrice": 409796,
+        "netProfit": 37534
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Sunt Dolore",
+        "sku": "SKU-PSK-26435",
+        "stock": 460,
+        "unit": "lusin",
+        "initialPrice": 486388,
+        "sellingPrice": 527586,
+        "netProfit": 41198
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Similique Eveniet",
+        "sku": "SKU-WQZ-66784",
+        "stock": 307,
+        "unit": "pcs",
+        "initialPrice": 220534,
+        "sellingPrice": 234202,
+        "netProfit": 13668
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Et Odio",
+        "sku": "SKU-ZPT-30382",
+        "stock": 32,
+        "unit": "pak",
+        "initialPrice": 484091,
+        "sellingPrice": 486927,
+        "netProfit": 2836
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Quidem Qui",
+        "sku": "SKU-WXV-44750",
+        "stock": 373,
+        "unit": "dus",
+        "initialPrice": 336980,
+        "sellingPrice": 349348,
+        "netProfit": 12368
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Odit Blanditiis",
+        "sku": "SKU-EQA-23983",
+        "stock": 9,
+        "unit": "liter",
+        "initialPrice": 35228,
+        "sellingPrice": 77696,
+        "netProfit": 42468
+    },
+    {
+        "category": "UMUM",
+        "name": "Facilis Incidunt",
+        "sku": "SKU-JSY-73583",
+        "stock": 282,
+        "unit": "kg",
+        "initialPrice": 318047,
+        "sellingPrice": 335656,
+        "netProfit": 17609
+    },
+    {
+        "category": "UMUM",
+        "name": "Suscipit Odio",
+        "sku": "SKU-WWO-19238",
+        "stock": 420,
+        "unit": "lusin",
+        "initialPrice": 499751,
+        "sellingPrice": 535371,
+        "netProfit": 35620
+    },
+    {
+        "category": "UMUM",
+        "name": "Perspiciatis Illo",
+        "sku": "SKU-GLY-15399",
+        "stock": 177,
+        "unit": "liter",
+        "initialPrice": 266192,
+        "sellingPrice": 308576,
+        "netProfit": 42384
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Nesciunt Vel",
+        "sku": "SKU-PNU-79301",
+        "stock": 179,
+        "unit": "pak",
+        "initialPrice": 34959,
+        "sellingPrice": 57416,
+        "netProfit": 22457
+    },
+    {
+        "category": "UMUM",
+        "name": "Explicabo Deleniti",
+        "sku": "SKU-XOP-86259",
+        "stock": 495,
+        "unit": "liter",
+        "initialPrice": 499884,
+        "sellingPrice": 525516,
+        "netProfit": 25632
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Saepe Maxime",
+        "sku": "SKU-BNA-25483",
+        "stock": 236,
+        "unit": "kg",
+        "initialPrice": 82212,
+        "sellingPrice": 86844,
+        "netProfit": 4632
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Pariatur Ratione",
+        "sku": "SKU-TQY-53877",
+        "stock": 31,
+        "unit": "kg",
+        "initialPrice": 468760,
+        "sellingPrice": 473829,
+        "netProfit": 5069
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Delectus Consequuntur",
+        "sku": "SKU-ANR-54033",
+        "stock": 420,
+        "unit": "pak",
+        "initialPrice": 240377,
+        "sellingPrice": 241831,
+        "netProfit": 1454
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Itaque Tempore",
+        "sku": "SKU-PQL-37257",
+        "stock": 474,
+        "unit": "liter",
+        "initialPrice": 338792,
+        "sellingPrice": 347285,
+        "netProfit": 8493
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Consequatur Illo",
+        "sku": "SKU-GPU-28625",
+        "stock": 463,
+        "unit": "liter",
+        "initialPrice": 324419,
+        "sellingPrice": 333489,
+        "netProfit": 9070
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Voluptatem Cum",
+        "sku": "SKU-GFL-00770",
+        "stock": 177,
+        "unit": "kg",
+        "initialPrice": 316683,
+        "sellingPrice": 353178,
+        "netProfit": 36495
+    },
+    {
+        "category": "UMUM",
+        "name": "Quos Nulla",
+        "sku": "SKU-RHZ-76409",
+        "stock": 475,
+        "unit": "pak",
+        "initialPrice": 231546,
+        "sellingPrice": 274926,
+        "netProfit": 43380
+    },
+    {
+        "category": "UMUM",
+        "name": "Nesciunt Ipsa",
+        "sku": "SKU-JJH-25258",
+        "stock": 328,
+        "unit": "kg",
+        "initialPrice": 229273,
+        "sellingPrice": 240655,
+        "netProfit": 11382
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Perspiciatis Nemo",
+        "sku": "SKU-IYS-32636",
+        "stock": 452,
+        "unit": "lusin",
+        "initialPrice": 390892,
+        "sellingPrice": 439369,
+        "netProfit": 48477
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Vitae Aliquid",
+        "sku": "SKU-ZFL-67903",
+        "stock": 242,
+        "unit": "lusin",
+        "initialPrice": 41074,
+        "sellingPrice": 57408,
+        "netProfit": 16334
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Placeat Nobis",
+        "sku": "SKU-KAY-24778",
+        "stock": 488,
+        "unit": "pak",
+        "initialPrice": 255305,
+        "sellingPrice": 264111,
+        "netProfit": 8806
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Repellat Debitis",
+        "sku": "SKU-TJY-72228",
+        "stock": 328,
+        "unit": "dus",
+        "initialPrice": 34751,
+        "sellingPrice": 76902,
+        "netProfit": 42151
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Harum Doloribus",
+        "sku": "SKU-QTU-42779",
+        "stock": 175,
+        "unit": "pcs",
+        "initialPrice": 373989,
+        "sellingPrice": 412122,
+        "netProfit": 38133
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Perspiciatis Officia",
+        "sku": "SKU-UJD-58694",
+        "stock": 305,
+        "unit": "pak",
+        "initialPrice": 452232,
+        "sellingPrice": 481373,
+        "netProfit": 29141
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Libero Saepe",
+        "sku": "SKU-MJU-05181",
+        "stock": 108,
+        "unit": "lusin",
+        "initialPrice": 479472,
+        "sellingPrice": 482589,
+        "netProfit": 3117
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Suscipit Sint",
+        "sku": "SKU-WWQ-03988",
+        "stock": 267,
+        "unit": "kg",
+        "initialPrice": 357843,
+        "sellingPrice": 360278,
+        "netProfit": 2435
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Rem Aliquam",
+        "sku": "SKU-XMM-33907",
+        "stock": 370,
+        "unit": "pak",
+        "initialPrice": 27114,
+        "sellingPrice": 45384,
+        "netProfit": 18270
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Officiis Tempore",
+        "sku": "SKU-QFI-87102",
+        "stock": 105,
+        "unit": "pcs",
+        "initialPrice": 375126,
+        "sellingPrice": 393664,
+        "netProfit": 18538
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Iste Porro",
+        "sku": "SKU-CCJ-82785",
+        "stock": 154,
+        "unit": "lusin",
+        "initialPrice": 91555,
+        "sellingPrice": 122958,
+        "netProfit": 31403
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Necessitatibus Ad",
+        "sku": "SKU-SMD-69377",
+        "stock": 366,
+        "unit": "lusin",
+        "initialPrice": 263436,
+        "sellingPrice": 298218,
+        "netProfit": 34782
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Minus Quis",
+        "sku": "SKU-PZO-54107",
+        "stock": 164,
+        "unit": "kg",
+        "initialPrice": 143027,
+        "sellingPrice": 152113,
+        "netProfit": 9086
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Consectetur Nemo",
+        "sku": "SKU-BNU-68805",
+        "stock": 281,
+        "unit": "pcs",
+        "initialPrice": 196379,
+        "sellingPrice": 218995,
+        "netProfit": 22616
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Suscipit Labore",
+        "sku": "SKU-SKU-34963",
+        "stock": 477,
+        "unit": "pak",
+        "initialPrice": 373821,
+        "sellingPrice": 391422,
+        "netProfit": 17601
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Consequuntur Totam",
+        "sku": "SKU-KFZ-09179",
+        "stock": 403,
+        "unit": "liter",
+        "initialPrice": 38797,
+        "sellingPrice": 39927,
+        "netProfit": 1130
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Inventore Excepturi",
+        "sku": "SKU-VAK-96686",
+        "stock": 448,
+        "unit": "liter",
+        "initialPrice": 141939,
+        "sellingPrice": 175517,
+        "netProfit": 33578
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Earum Magnam",
+        "sku": "SKU-VBA-20160",
+        "stock": 145,
+        "unit": "dus",
+        "initialPrice": 57420,
+        "sellingPrice": 58924,
+        "netProfit": 1504
+    },
+    {
+        "category": "UMUM",
+        "name": "Ipsum Consectetur",
+        "sku": "SKU-JYT-03491",
+        "stock": 91,
+        "unit": "kg",
+        "initialPrice": 428094,
+        "sellingPrice": 460289,
+        "netProfit": 32195
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Culpa Distinctio",
+        "sku": "SKU-ZNF-19082",
+        "stock": 352,
+        "unit": "pcs",
+        "initialPrice": 236622,
+        "sellingPrice": 285120,
+        "netProfit": 48498
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Ab Earum",
+        "sku": "SKU-ZAN-25988",
+        "stock": 492,
+        "unit": "lusin",
+        "initialPrice": 233104,
+        "sellingPrice": 260742,
+        "netProfit": 27638
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Minus Dolorum",
+        "sku": "SKU-VYJ-93891",
+        "stock": 120,
+        "unit": "kg",
+        "initialPrice": 289551,
+        "sellingPrice": 311657,
+        "netProfit": 22106
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Tempora At",
+        "sku": "SKU-AYO-42818",
+        "stock": 262,
+        "unit": "pak",
+        "initialPrice": 430610,
+        "sellingPrice": 440876,
+        "netProfit": 10266
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Similique Praesentium",
+        "sku": "SKU-PRC-96120",
+        "stock": 208,
+        "unit": "pcs",
+        "initialPrice": 262864,
+        "sellingPrice": 265878,
+        "netProfit": 3014
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Illum Cupiditate",
+        "sku": "SKU-QRP-84987",
+        "stock": 399,
+        "unit": "liter",
+        "initialPrice": 77469,
+        "sellingPrice": 111807,
+        "netProfit": 34338
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Omnis Hic",
+        "sku": "SKU-DMX-05466",
+        "stock": 451,
+        "unit": "liter",
+        "initialPrice": 466979,
+        "sellingPrice": 504094,
+        "netProfit": 37115
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Quo Quaerat",
+        "sku": "SKU-MQD-82318",
+        "stock": 202,
+        "unit": "pcs",
+        "initialPrice": 362452,
+        "sellingPrice": 363608,
+        "netProfit": 1156
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Laborum Quos",
+        "sku": "SKU-GTW-91948",
+        "stock": 390,
+        "unit": "pak",
+        "initialPrice": 77174,
+        "sellingPrice": 116221,
+        "netProfit": 39047
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Tenetur Quis",
+        "sku": "SKU-KZX-02761",
+        "stock": 143,
+        "unit": "lusin",
+        "initialPrice": 497870,
+        "sellingPrice": 533227,
+        "netProfit": 35357
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Reprehenderit Atque",
+        "sku": "SKU-LBX-03236",
+        "stock": 448,
+        "unit": "kg",
+        "initialPrice": 492531,
+        "sellingPrice": 521403,
+        "netProfit": 28872
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Dolor Expedita",
+        "sku": "SKU-FHM-79707",
+        "stock": 425,
+        "unit": "kg",
+        "initialPrice": 62264,
+        "sellingPrice": 88578,
+        "netProfit": 26314
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Repellendus Sunt",
+        "sku": "SKU-AAN-42343",
+        "stock": 489,
+        "unit": "pak",
+        "initialPrice": 235001,
+        "sellingPrice": 280926,
+        "netProfit": 45925
+    },
+    {
+        "category": "MAKANAN",
+        "name": "Aliquam Enim",
+        "sku": "SKU-SRB-47356",
+        "stock": 76,
+        "unit": "lusin",
+        "initialPrice": 87987,
+        "sellingPrice": 106272,
+        "netProfit": 18285
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Unde Illum",
+        "sku": "SKU-QOM-05202",
+        "stock": 203,
+        "unit": "dus",
+        "initialPrice": 496720,
+        "sellingPrice": 537160,
+        "netProfit": 40440
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Soluta Eveniet",
+        "sku": "SKU-SVE-26646",
+        "stock": 500,
+        "unit": "dus",
+        "initialPrice": 499117,
+        "sellingPrice": 501709,
+        "netProfit": 2592
+    },
+    {
+        "category": "PAKAIAN",
+        "name": "Aperiam Eum",
+        "sku": "SKU-ZXF-72738",
+        "stock": 220,
+        "unit": "dus",
+        "initialPrice": 71008,
+        "sellingPrice": 80425,
+        "netProfit": 9417
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Facilis Rerum",
+        "sku": "SKU-UWX-31611",
+        "stock": 478,
+        "unit": "liter",
+        "initialPrice": 55243,
+        "sellingPrice": 98422,
+        "netProfit": 43179
+    },
+    {
+        "category": "MINUMAN",
+        "name": "Eius Sint",
+        "sku": "SKU-SMT-49993",
+        "stock": 107,
+        "unit": "lusin",
+        "initialPrice": 316570,
+        "sellingPrice": 338319,
+        "netProfit": 21749
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Animi Facilis",
+        "sku": "SKU-IBW-15953",
+        "stock": 252,
+        "unit": "kg",
+        "initialPrice": 479561,
+        "sellingPrice": 482670,
+        "netProfit": 3109
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Aliquid Harum",
+        "sku": "SKU-THP-17621",
+        "stock": 263,
+        "unit": "lusin",
+        "initialPrice": 464821,
+        "sellingPrice": 472797,
+        "netProfit": 7976
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Ea Repellat",
+        "sku": "SKU-ERZ-64293",
+        "stock": 78,
+        "unit": "pak",
+        "initialPrice": 295746,
+        "sellingPrice": 317131,
+        "netProfit": 21385
+    },
+    {
+        "category": "UMUM",
+        "name": "Assumenda Non",
+        "sku": "SKU-FGH-24938",
+        "stock": 426,
+        "unit": "dus",
+        "initialPrice": 65834,
+        "sellingPrice": 92095,
+        "netProfit": 26261
+    },
+    {
+        "category": "ELEKTRONIK",
+        "name": "Aut Eum",
+        "sku": "SKU-RES-55344",
+        "stock": 270,
+        "unit": "dus",
+        "initialPrice": 160443,
+        "sellingPrice": 188717,
+        "netProfit": 28274
+    },
+    {
+        "category": "PERLENGKAPAN",
+        "name": "Officia Culpa",
+        "sku": "SKU-RMP-22512",
+        "stock": 171,
+        "unit": "pak",
+        "initialPrice": 96204,
+        "sellingPrice": 123968,
+        "netProfit": 27764
+    }
+]
