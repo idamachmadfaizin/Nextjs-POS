@@ -44,6 +44,5 @@ next-env.d.ts
 # firebase studio
 .idx
 firebase-debug.log
-.pgdata
-.pgsocket
-pgsql.log
+.databases
+/src/generated/prisma
