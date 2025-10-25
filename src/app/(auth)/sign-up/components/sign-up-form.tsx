@@ -2,6 +2,7 @@
 
 import { Nullable } from "@/types/nullable";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 import { Button } from "@/components/ui/button";
@@ -20,22 +21,47 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { authClient } from "@/lib/auth-client";
 import { cn } from "@/lib/utils";
 
-export function SignupForm({
+export function SignUpForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const router = useRouter();
   const [focusOn, setFocusOn] = React.useState<Nullable<string>>(null);
 
   function formFocusHandler(
-    event: React.FocusEvent<HTMLFormElement, Element>
+    event: React.FocusEvent<HTMLFormElement, Element>,
   ): void {
     setFocusOn(event.target.id);
   }
 
   function formBlurHandler(): void {
     setFocusOn(null);
+  }
+
+  async function onSignUp(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+
+    const res = await authClient.signUp.email({
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      password: formData.get("password") as string,
+    });
+
+    if (res.error) {
+      console.error("Error: " + res.error.message || "Something went wrong.");
+    } else {
+      router.push("/");
+    }
+
+    const data = Object.fromEntries(formData.entries());
+    console.log("Submitted Data:", data);
+
+    router.push("/");
   }
 
   return (
@@ -48,7 +74,11 @@ export function SignupForm({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onFocus={formFocusHandler} onBlur={formBlurHandler}>
+          <form
+            onFocus={formFocusHandler}
+            onBlur={formBlurHandler}
+            onSubmit={onSignUp}
+          >
             <FieldGroup>
               <Field>
                 <Button variant="outline" type="button">
@@ -75,13 +105,20 @@ export function SignupForm({
               </FieldSeparator>
               <Field>
                 <FieldLabel htmlFor="name">Full Name</FieldLabel>
-                <Input id="name" type="text" placeholder="John Doe" required />
+                <Input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="John Doe"
+                  required
+                />
               </Field>
               <Field>
                 <FieldLabel htmlFor="email">Email</FieldLabel>
                 <Input
                   id="email"
                   type="email"
+                  name="email"
                   placeholder="me@example.com"
                   required
                 />
@@ -96,13 +133,23 @@ export function SignupForm({
                 <Field className="grid grid-cols-2 gap-4">
                   <Field>
                     <FieldLabel htmlFor="password">Password</FieldLabel>
-                    <Input id="password" type="password" required />
+                    <Input
+                      id="password"
+                      name="password"
+                      type="password"
+                      required
+                    />
                   </Field>
                   <Field>
                     <FieldLabel htmlFor="confirm-password">
                       Confirm Password
                     </FieldLabel>
-                    <Input id="confirm-password" type="password" required />
+                    <Input
+                      id="confirm-password"
+                      name="confirm-password"
+                      type="password"
+                      required
+                    />
                   </Field>
                 </Field>
                 {focusOn === "password" && (
