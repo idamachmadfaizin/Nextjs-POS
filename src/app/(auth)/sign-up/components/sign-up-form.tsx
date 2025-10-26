@@ -3,7 +3,9 @@
 import { Nullable } from "@/types/nullable";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useMemo, useState } from "react";
+import { useForm } from "@tanstack/react-form";
+import z from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +18,7 @@ import {
 import {
   Field,
   FieldDescription,
+  FieldError,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
@@ -23,46 +26,59 @@ import {
 import { Input } from "@/components/ui/input";
 import { authClient } from "@/lib/auth-client";
 import { cn } from "@/lib/utils";
+import { Spinner } from "@/components/ui/spinner";
+
+const formSchema = z
+  .object({
+    name: z.string().min(4, "Name must be at least 4 characters"),
+    email: z.email(),
+    password: z.string().min(8, "Password must be at least 8 characters"),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords must match",
+    path: ["confirmPassword"],
+  });
+
+type FormValues = z.infer<typeof formSchema>;
 
 export function SignUpForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
   const router = useRouter();
-  const [focusOn, setFocusOn] = React.useState<Nullable<string>>(null);
 
-  function formFocusHandler(
-    event: React.FocusEvent<HTMLFormElement, Element>,
-  ): void {
-    setFocusOn(event.target.id);
-  }
+  const [resErrors, setResErrors] = useState<{ message: string }[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  function formBlurHandler(): void {
-    setFocusOn(null);
-  }
+  const form = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    } as FormValues,
+    validators: {
+      onSubmit: formSchema,
+    },
+    onSubmit: async ({ value }) => {
+      setIsLoading(true);
 
-  async function onSignUp(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+      const res = await authClient.signUp.email({
+        name: value.name,
+        email: value.email,
+        password: value.password,
+      });
 
-    const formData = new FormData(event.currentTarget);
-
-    const res = await authClient.signUp.email({
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      password: formData.get("password") as string,
-    });
-
-    if (res.error) {
-      console.error("Error: " + res.error.message || "Something went wrong.");
-    } else {
-      router.push("/");
-    }
-
-    const data = Object.fromEntries(formData.entries());
-    console.log("Submitted Data:", data);
-
-    router.push("/");
-  }
+      if (res.error) {
+        const message = res.error.message || "Something went wrong.";
+        setResErrors([{ message }]);
+        setIsLoading(false);
+      } else {
+        router.replace("/");
+      }
+    },
+  });
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
@@ -75,9 +91,11 @@ export function SignUpForm({
         </CardHeader>
         <CardContent>
           <form
-            onFocus={formFocusHandler}
-            onBlur={formBlurHandler}
-            onSubmit={onSignUp}
+            onSubmit={(e) => {
+              e.preventDefault();
+              setResErrors([]);
+              form.handleSubmit();
+            }}
           >
             <FieldGroup>
               <Field>
@@ -103,63 +121,129 @@ export function SignUpForm({
               <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
                 Or continue with
               </FieldSeparator>
-              <Field>
-                <FieldLabel htmlFor="name">Full Name</FieldLabel>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="John Doe"
-                  required
-                />
-              </Field>
-              <Field>
-                <FieldLabel htmlFor="email">Email</FieldLabel>
-                <Input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="me@example.com"
-                  required
-                />
-                {focusOn === "email" && (
-                  <FieldDescription>
-                    We&apos;ll use this to contact you. We will not share your
-                    email with anyone else.
-                  </FieldDescription>
-                )}
-              </Field>
+              <form.Field
+                name="name"
+                children={(field) => {
+                  const isInvalid =
+                    field.state.meta.isTouched && !field.state.meta.isValid;
+
+                  return (
+                    <Field data-invalid={isInvalid}>
+                      <FieldLabel htmlFor={field.name}>Full Name</FieldLabel>
+                      <Input
+                        id={field.name}
+                        name={field.name}
+                        value={field.state.value}
+                        onChange={(e) => field.handleChange(e.target.value)}
+                        aria-invalid={isInvalid}
+                        type="text"
+                        placeholder="John Doe"
+                        autoComplete="off"
+                        required
+                      />
+                      {isInvalid && (
+                        <FieldError errors={field.state.meta.errors} />
+                      )}
+                    </Field>
+                  );
+                }}
+              />
+
+              <form.Field
+                name="email"
+                children={(field) => {
+                  const isInvalid =
+                    field.state.meta.isTouched && !field.state.meta.isValid;
+
+                  return (
+                    <Field data-invalid={isInvalid}>
+                      <FieldLabel htmlFor={field.name}>Email</FieldLabel>
+                      <Input
+                        id={field.name}
+                        name={field.name}
+                        value={field.state.value}
+                        onChange={(e) => field.handleChange(e.target.value)}
+                        aria-invalid={isInvalid}
+                        type="email"
+                        placeholder="me@example.com"
+                        autoComplete="off"
+                        required
+                      />
+                      {isInvalid && (
+                        <FieldError errors={field.state.meta.errors} />
+                      )}
+                      <FieldDescription>
+                        We&apos;ll use this to contact you. We will not share
+                        your email with anyone else.
+                      </FieldDescription>
+                    </Field>
+                  );
+                }}
+              />
+
               <Field>
                 <Field className="grid grid-cols-2 gap-4">
-                  <Field>
-                    <FieldLabel htmlFor="password">Password</FieldLabel>
-                    <Input
-                      id="password"
-                      name="password"
-                      type="password"
-                      required
-                    />
-                  </Field>
-                  <Field>
-                    <FieldLabel htmlFor="confirm-password">
-                      Confirm Password
-                    </FieldLabel>
-                    <Input
-                      id="confirm-password"
-                      name="confirm-password"
-                      type="password"
-                      required
-                    />
-                  </Field>
+                  <form.Field
+                    name="password"
+                    children={(field) => {
+                      const isInvalid =
+                        field.state.meta.isTouched && !field.state.meta.isValid;
+
+                      return (
+                        <Field data-invalid={isInvalid}>
+                          <FieldLabel htmlFor={field.name}>Password</FieldLabel>
+                          <Input
+                            id={field.name}
+                            name={field.name}
+                            value={field.state.value}
+                            onChange={(e) => field.handleChange(e.target.value)}
+                            aria-invalid={isInvalid}
+                            type="password"
+                            required
+                          />
+                          {isInvalid && (
+                            <FieldError errors={field.state.meta.errors} />
+                          )}
+                        </Field>
+                      );
+                    }}
+                  />
+
+                  <form.Field
+                    name="confirmPassword"
+                    children={(field) => {
+                      const isInvalid =
+                        field.state.meta.isTouched && !field.state.meta.isValid;
+
+                      return (
+                        <Field data-invalid={isInvalid}>
+                          <FieldLabel htmlFor={field.name}>
+                            Confirm Password
+                          </FieldLabel>
+                          <Input
+                            id={field.name}
+                            name={field.name}
+                            value={field.state.value}
+                            onChange={(e) => field.handleChange(e.target.value)}
+                            aria-invalid={isInvalid}
+                            type="password"
+                            required
+                          />
+                          {isInvalid && (
+                            <FieldError errors={field.state.meta.errors} />
+                          )}
+                        </Field>
+                      );
+                    }}
+                  />
                 </Field>
-                {focusOn === "password" && (
-                  <FieldDescription>
-                    Must be at least 8 characters long.
-                  </FieldDescription>
-                )}
               </Field>
               <Field>
-                <Button type="submit">Create Account</Button>
+                <FieldError errors={resErrors} />
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Spinner />}
+                  Create Account
+                </Button>
                 <FieldDescription className="text-center">
                   Already have an account? <Link href="/login">Sign in</Link>
                 </FieldDescription>
