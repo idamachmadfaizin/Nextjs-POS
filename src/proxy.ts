@@ -11,8 +11,7 @@ export async function proxy(request: NextRequest) {
     !pathname.startsWith("/sign-up")
   ) {
     const loginUrl = new URL("/login", request.url);
-    // loginUrl.searchParams.set("redirectTo", pathname);
-    console.log("redirect to: " + loginUrl.toString());
+    loginUrl.searchParams.set("redirectTo", pathname);
     return NextResponse.redirect(loginUrl);
   }
 
@@ -20,14 +19,15 @@ export async function proxy(request: NextRequest) {
     session &&
     (pathname.startsWith("/login") || pathname.startsWith("/sign-up"))
   ) {
-    console.log("redirect to: " + new URL("/", request.url).toString());
     return NextResponse.redirect(new URL("/", request.url));
   }
 
-  console.log("proxy next.")
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/"], // Specify the routes the middleware applies to
+  matcher: [
+    "/((?!api/auth|_next/static|_next/image|favicon.ico|.*\\.png$).*)",// claude
+    // "/((?!_next/static|_next/image|favicon.ico).*)",//chatgpt
+  ],
 };
