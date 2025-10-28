@@ -1,5 +1,11 @@
 "use client";
 
+import { useForm } from "@tanstack/react-form";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { useState } from "react";
+import z from "zod";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,30 +17,66 @@ import {
 import {
   Field,
   FieldDescription,
+  FieldError,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Spinner } from "@/components/ui/spinner";
+import { authClient } from "@/lib/auth-client";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+
+const formSchema = z.object({
+  email: z.email(),
+  password: z.string(),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  function onLogin(event: React.FormEvent<HTMLFormElement>): void {
-    event.preventDefault();
+  const callbackURL = searchParams.get("next") || "/";
 
-    const formData = new FormData(event.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-    console.log("Submitted Data:", data);
+  const [errors, setErrors] = useState<{ message: string }[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-    router.push("/");
-  }
+  const form = useForm({
+    defaultValues: {
+      email: "",
+      password: "",
+    } as FormValues,
+    validators: {
+      onSubmit: formSchema,
+    },
+    onSubmit: ({ value }) => {
+      authClient.signIn.email(
+        {
+          email: value.email,
+          password: value.password,
+          callbackURL: callbackURL,
+        },
+        {
+          onRequest: () => {
+            setIsLoading(true);
+            setErrors([]);
+          },
+          onResponse: () => {
+            setIsLoading(false);
+          },
+          onError: (errCtx) => {
+            const message = errCtx.error.message || "Failed to sign in";
+            setErrors([{ message }]);
+            setIsLoading(false);
+          },
+        },
+      );
+    },
+  });
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
@@ -46,7 +88,13 @@ export function LoginForm({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={onLogin}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              setErrors([]);
+              form.handleSubmit();
+            }}
+          >
             <FieldGroup>
               <Field>
                 <Button variant="outline" type="button">
@@ -71,30 +119,69 @@ export function LoginForm({
               <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
                 Or continue with
               </FieldSeparator>
+
+              <form.Field
+                name="email"
+                children={(field) => {
+                  const isInvalid =
+                    field.state.meta.isTouched && !field.state.meta.isValid;
+
+                  return (
+                    <Field data-invalid={isInvalid}>
+                      <FieldLabel htmlFor={field.name}>Email</FieldLabel>
+                      <Input
+                        id={field.name}
+                        name={field.name}
+                        value={field.state.value}
+                        onChange={(e) => field.handleChange(e.target.value)}
+                        aria-invalid={isInvalid}
+                        type="email"
+                        placeholder="me@example.com"
+                        autoComplete="off"
+                        required
+                      />
+                    </Field>
+                  );
+                }}
+              />
+
+              <form.Field
+                name="password"
+                children={(field) => {
+                  const isInvalid =
+                    field.state.meta.isTouched && !field.state.meta.isValid;
+
+                  return (
+                    <Field data-invalid={isInvalid}>
+                      <div className="flex items-center">
+                        <FieldLabel htmlFor={field.name}>Password</FieldLabel>
+                        <Link
+                          href="#"
+                          className="ml-auto text-sm underline-offset-4 hover:underline"
+                        >
+                          Forgot your password?
+                        </Link>
+                      </div>
+                      <Input
+                        id={field.name}
+                        name={field.name}
+                        value={field.state.value}
+                        onChange={(e) => field.handleChange(e.target.value)}
+                        aria-invalid={isInvalid}
+                        type="password"
+                        required
+                      />
+                    </Field>
+                  );
+                }}
+              />
+
               <Field>
-                <FieldLabel htmlFor="email">Email</FieldLabel>
-                <Input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="me@example.com"
-                  required
-                />
-              </Field>
-              <Field>
-                <div className="flex items-center">
-                  <FieldLabel htmlFor="password">Password</FieldLabel>
-                  <a
-                    href="#"
-                    className="ml-auto text-sm underline-offset-4 hover:underline"
-                  >
-                    Forgot your password?
-                  </a>
-                </div>
-                <Input id="password" type="password" name="password" required />
-              </Field>
-              <Field>
-                <Button type="submit">Login</Button>
+                <FieldError errors={errors} />
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Spinner />}
+                  Login
+                </Button>
                 <FieldDescription className="text-center">
                   Don&apos;t have an account?{" "}
                   <Link href="/sign-up">Sign up</Link>

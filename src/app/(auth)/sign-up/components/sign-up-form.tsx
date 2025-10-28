@@ -48,7 +48,7 @@ export function SignUpForm({
 }: React.ComponentProps<"div">) {
   const router = useRouter();
 
-  const [resErrors, setResErrors] = useState<{ message: string }[]>([]);
+  const [errors, setErrors] = useState<{ message: string }[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm({
@@ -72,7 +72,7 @@ export function SignUpForm({
 
       if (res.error) {
         const message = res.error.message || "Something went wrong.";
-        setResErrors([{ message }]);
+        setErrors([{ message }]);
         setIsLoading(false);
       } else {
         router.replace("/");
@@ -93,7 +93,7 @@ export function SignUpForm({
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              setResErrors([]);
+              setErrors([]);
               form.handleSubmit();
             }}
           >
@@ -239,7 +239,7 @@ export function SignUpForm({
                 </Field>
               </Field>
               <Field>
-                <FieldError errors={resErrors} />
+                <FieldError errors={errors} />
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Spinner />}
                   Create Account

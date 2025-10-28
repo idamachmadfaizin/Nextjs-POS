@@ -6,7 +6,7 @@ import {
   LucideLogOut,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -24,6 +24,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { authClient } from "@/lib/auth-client";
 
 export function NavUser({
   user,
@@ -36,6 +37,7 @@ export function NavUser({
 }) {
   const { isMobile } = useSidebar();
   const router = useRouter();
+
   const avatarFallback = useMemo(() => {
     const name = user.name?.trim();
 
@@ -53,6 +55,16 @@ export function NavUser({
       .join("")
       .toUpperCase();
   }, [user]);
+
+  const onLogout = useCallback(() => {
+    authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          router.push("/login");
+        },
+      },
+    });
+  }, []);
 
   return (
     <SidebarMenu>
@@ -114,7 +126,7 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => router.push("/login")}>
+            <DropdownMenuItem onClick={onLogout}>
               <LucideLogOut />
               Log out
             </DropdownMenuItem>
