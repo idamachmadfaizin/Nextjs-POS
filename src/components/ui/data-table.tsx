@@ -11,10 +11,12 @@ import {
   LucideChevronsRight,
   LucideChevronsUpDown,
   LucideColumns2,
+  LucideEllipsisVertical,
   LucideEye,
   LucideEyeOff,
   LucideMoreHorizontal,
   LucidePencil,
+  LucideSearch,
   LucideTrash2,
 } from "lucide-react";
 
@@ -50,9 +52,48 @@ import {
   Table as UiTable,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
+import { CSSProperties } from "react";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "./input-group";
+import { Checkbox } from "./checkbox";
 
 type DataTableProps<TData> = {
   table: Table<TData>;
+};
+
+const getCommonPinningStyles = (
+  column: Column<any>,
+  isHeader: boolean,
+): CSSProperties => {
+  const isPinned = column.getIsPinned();
+  const isLastLeftPinnedColumn =
+    isPinned === "left" && column.getIsLastColumn("left");
+  const isFirstRightPinnedColumn =
+    isPinned === "right" && column.getIsFirstColumn("right");
+
+  return {
+    boxShadow: isLastLeftPinnedColumn
+      ? "var(--border) -1px 0 0 0 inset"
+      : isFirstRightPinnedColumn
+        ? "var(--border) 1px 0 0 0 inset"
+        : undefined,
+    left: isPinned === "left" ? `${column.getStart("left")}px` : undefined,
+    right: isPinned === "right" ? `${column.getAfter("right")}px` : undefined,
+    width: column.getSize(),
+    backgroundColor: isPinned
+      ? isHeader
+        ? "var(--muted)"
+        : "var(--background)"
+      : undefined,
+  };
+};
+
+const getCommonPinningClassName = (column: Column<any>) => {
+  const isPinned = column.getIsPinned();
+
+  return cn({
+    sticky: isPinned,
+    "z-10": isPinned,
+  });
 };
 
 export function DataTable<TData>({ table }: DataTableProps<TData>) {
@@ -61,14 +102,39 @@ export function DataTable<TData>({ table }: DataTableProps<TData>) {
       <DataTableActions table={table} />
 
       <div className="-mt-2">
-        <div className="overflow-hidden rounded-md border">
+        <div className="z overflow-hidden rounded-md border">
           <UiTable>
             <TableHeader className="bg-muted">
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>
+                  <TableHead
+                    key="select"
+                    style={{
+                      width: `25px`,
+                    }}
+                  >
+                    <Checkbox
+                      checked={
+                        table.getIsAllPageRowsSelected() ||
+                        (table.getIsSomePageRowsSelected() && "indeterminate")
+                      }
+                      onCheckedChange={(value) =>
+                        table.toggleAllPageRowsSelected(!!value)
+                      }
+                      aria-label="Select all"
+                    />
+                  </TableHead>
+
                   {headerGroup.headers.map((header) => {
                     return (
-                      <TableHead key={header.id}>
+                      <TableHead
+                        key={header.id}
+                        colSpan={header.colSpan}
+                        className={getCommonPinningClassName(header.column)}
+                        style={{
+                          ...getCommonPinningStyles(header.column, true),
+                        }}
+                      >
                         {header.isPlaceholder
                           ? null
                           : flexRender(
@@ -88,8 +154,27 @@ export function DataTable<TData>({ table }: DataTableProps<TData>) {
                     key={row.id}
                     data-state={row.getIsSelected() && "selected"}
                   >
+                    <TableCell
+                      key="select"
+                      style={{
+                        width: "25px",
+                      }}
+                    >
+                      <Checkbox
+                        checked={row.getIsSelected()}
+                        onCheckedChange={(value) => row.toggleSelected(!!value)}
+                        aria-label="Select row"
+                      />
+                    </TableCell>
+
                     {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id}>
+                      <TableCell
+                        key={cell.id}
+                        className={getCommonPinningClassName(cell.column)}
+                        style={{
+                          ...getCommonPinningStyles(cell.column, false),
+                        }}
+                      >
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext(),
@@ -131,37 +216,69 @@ export function DataTableActions<TData>({
   table,
 }: DataTableActionsProps<TData>) {
   return (
-    <div className="flex items-center justify-end gap-2 rounded-t-sm border border-b-0 px-5 pt-2 pb-4">
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm">
-            <LucideColumns2 />
+    <div className="flex items-center justify-between gap-2 rounded-t-sm border border-b-0 px-5 pt-2 pb-4">
+      <div className="flex">
+        {table.getIsSomeRowsSelected() && (
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="sm">
+                <LucideEllipsisVertical />
 
-            <span className="hidden sm:inline">Columns</span>
-            <LucideChevronDown className="hidden sm:inline" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-56">
-          {table
-            .getAllColumns()
-            .filter(
-              (column) =>
-                typeof column.accessorFn !== "undefined" && column.getCanHide(),
-            )
-            .map((column) => {
-              return (
-                <DropdownMenuCheckboxItem
-                  key={column.id}
-                  className="capitalize"
-                  checked={column.getIsVisible()}
-                  onCheckedChange={(value) => column.toggleVisibility(!!value)}
-                >
-                  {column.id}
-                </DropdownMenuCheckboxItem>
-              );
-            })}
-        </DropdownMenuContent>
-      </DropdownMenu>
+                <span className="hidden sm:inline">Actions</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-44">
+              <DropdownMenuItem variant="destructive">
+                <LucideTrash2 />
+                Delete selected
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        )}
+      </div>
+
+      <div className="flex items-center justify-end gap-2">
+        <InputGroup className="max-w-60">
+          <InputGroupInput placeholder="Search" />
+          <InputGroupAddon>
+            <LucideSearch />
+          </InputGroupAddon>
+        </InputGroup>
+
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" size="sm" title="Column manager">
+              <LucideColumns2 />
+
+              <span className="hidden sm:inline">Columns</span>
+              <LucideChevronDown className="hidden sm:inline" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            {table
+              .getAllColumns()
+              .filter(
+                (column) =>
+                  typeof column.accessorFn !== "undefined" &&
+                  column.getCanHide(),
+              )
+              .map((column) => {
+                return (
+                  <DropdownMenuCheckboxItem
+                    key={column.id}
+                    className="capitalize"
+                    checked={column.getIsVisible()}
+                    onCheckedChange={(value) =>
+                      column.toggleVisibility(!!value)
+                    }
+                  >
+                    {column.id}
+                  </DropdownMenuCheckboxItem>
+                );
+              })}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </div>
   );
 }
@@ -357,18 +474,12 @@ export function DataTableColumnCellCurrency({
 }
 
 type DataTableColumnCellActionsProps = {
-  disableView?: boolean;
-  disableEdit?: boolean;
-  disableDelete?: boolean;
   onView?: () => void;
   onEdit?: () => void;
   onDelete?: () => void;
 };
 
 export function DataTableColumnCellActions({
-  disableView,
-  disableEdit,
-  disableDelete,
   onView,
   onEdit,
   onDelete,
@@ -382,19 +493,19 @@ export function DataTableColumnCellActions({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {!disableView && (
+        {typeof onView === "function" && (
           <DropdownMenuItem onClick={onView}>
             <LucideEye />
             View
           </DropdownMenuItem>
         )}
-        {!disableEdit && (
+        {typeof onEdit === "function" && (
           <DropdownMenuItem onClick={onEdit}>
             <LucidePencil />
             Edit
           </DropdownMenuItem>
         )}
-        {!disableDelete && (
+        {typeof onDelete === "function" && (
           <>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={onDelete} variant="destructive">

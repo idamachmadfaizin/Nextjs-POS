@@ -3,7 +3,6 @@ import {
   DataTableColumnCellActions,
   DataTableColumnCellCurrency,
   DataTableColumnHeader,
-  DataTablePagination,
 } from "@/components/ui/data-table";
 import {
   ColumnDef,
@@ -42,6 +41,29 @@ const currencyCell: ColumnDef<Product>["cell"] = (props) => {
 type Product = z.infer<typeof schema>;
 
 export const columns: ColumnDef<Product>[] = [
+  // {
+  //   id: "select",
+  //   header: ({ table }) => (
+  //     <Checkbox
+  //       checked={
+  //         table.getIsAllPageRowsSelected() ||
+  //         (table.getIsSomePageRowsSelected() && "indeterminate")
+  //       }
+  //       onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+  //       aria-label="Select all"
+  //     />
+  //   ),
+  //   cell: ({ row }) => (
+  //     <Checkbox
+  //       checked={row.getIsSelected()}
+  //       onCheckedChange={(value) => row.toggleSelected(!!value)}
+  //       aria-label="Select row"
+  //     />
+  //   ),
+  //   size: 25,
+  //   enableSorting: false,
+  //   enableHiding: false,
+  // },
   {
     accessorKey: "category",
     header: ({ column }) => (
@@ -110,7 +132,14 @@ export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: "actions",
     header: "",
-    cell: () => <DataTableColumnCellActions />,
+    cell: (props) => (
+      <DataTableColumnCellActions
+        onView={() => console.log("onView", props.row.original)}
+        onEdit={() => console.log("onEdit", props.row.original)}
+        onDelete={() => console.log("onDelete", props.row.original)}
+      />
+    ),
+    size: 30,
   },
 ];
 
@@ -123,8 +152,8 @@ export function ProductDataTable({ data }: Props) {
     columns,
     initialState: {
       columnPinning: {
-        left: ["actions"],
-        right: [],
+        left: [],
+        right: ["actions"],
       },
     },
     getCoreRowModel: getCoreRowModel(),
