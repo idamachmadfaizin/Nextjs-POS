@@ -11,9 +11,10 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { useAppForm } from "@/hooks/form";
-import { authClient } from "@/lib/auth-client";
-import { AppleButton } from "../../components/apple-button";
-import { GoogleButton } from "../../components/google-button";
+
+import { AppleButton } from "../../../components/apple-button";
+import { GoogleButton } from "../../../components/google-button";
+import { authClient } from "../../../lib/auth-client";
 
 const formSchema = z.object({
   email: z.email(),
@@ -105,7 +106,8 @@ export function LoginFormContent() {
             <form.SubscribeButton label="Login" />
           </form.AppForm>
           <FieldDescription className="text-center">
-            Don&apos;t have an account? <Link href="/auth/sign-up">Sign up</Link>
+            Don&apos;t have an account?{" "}
+            <Link href="/auth/sign-up">Sign up</Link>
           </FieldDescription>
         </Field>
       </FieldGroup>

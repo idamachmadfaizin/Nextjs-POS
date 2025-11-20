@@ -20,10 +20,11 @@ import {
   FieldSeparator,
 } from "@/components/ui/field";
 import { useAppForm } from "@/hooks/form";
-import { authClient } from "@/lib/auth-client";
 import { cn } from "@/lib/utils";
-import { AppleButton } from "../../components/apple-button";
-import { GoogleButton } from "../../components/google-button";
+
+import { AppleButton } from "../../../components/apple-button";
+import { GoogleButton } from "../../../components/google-button";
+import { authClient } from "../../../lib/auth-client";
 
 const formSchema = z.object({
   name: z.string().min(4, "Name must be at least 4 characters"),
@@ -141,7 +142,8 @@ export function SignUpForm({
                   <form.SubscribeButton label="Create Account" />
                 </form.AppForm>
                 <FieldDescription className="text-center">
-                  Already have an account? <Link href="/auth/login">Sign in</Link>
+                  Already have an account?{" "}
+                  <Link href="/auth/login">Sign in</Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>
