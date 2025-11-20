@@ -5,21 +5,19 @@ export function proxy(request: NextRequest) {
   const sessionCookie = getSessionCookie(request);
   const { pathname } = request.nextUrl;
 
-  if (
-    !sessionCookie &&
-    !pathname.startsWith("/login") &&
-    !pathname.startsWith("/sign-up")
-  ) {
-    const loginUrl = new URL("/login", request.url);
-    if (pathname !== "/") loginUrl.searchParams.set("next", pathname);
+  // Unauthorized
+  if (!sessionCookie && !pathname.startsWith("/auth")) {
+    const loginUrl = new URL("/auth/login", request.url);
+
+    if (pathname !== "/") {
+      loginUrl.searchParams.set("next", pathname);
+    }
 
     return NextResponse.redirect(loginUrl);
   }
 
-  if (
-    sessionCookie &&
-    (pathname.startsWith("/login") || pathname.startsWith("/sign-up"))
-  ) {
+  // Authorized but trying to access auth pages
+  if (sessionCookie && pathname.startsWith("/auth")) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 

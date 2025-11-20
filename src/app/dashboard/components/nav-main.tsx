@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   SidebarGroup,
@@ -9,9 +10,12 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { INavGroup } from "@/types/nav";
+import { isActive } from "../lib/nav";
+import { INavGroup } from "../types/nav";
 
 export function NavMain({ groups }: { groups: INavGroup[] }) {
+  const pathname = usePathname();
+
   return groups.map((group) => (
     <SidebarGroup
       key={group.key}
@@ -23,7 +27,7 @@ export function NavMain({ groups }: { groups: INavGroup[] }) {
       <SidebarMenu>
         {group.items.map((item) => (
           <SidebarMenuItem key={item.title}>
-            <SidebarMenuButton asChild>
+            <SidebarMenuButton isActive={isActive(pathname, item.href)} asChild>
               <Link href={item.href}>
                 <item.icon />
                 <span>{item.title}</span>

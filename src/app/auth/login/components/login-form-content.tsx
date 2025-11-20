@@ -24,7 +24,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function LoginFormContent() {
   const searchParams = useSearchParams();
-  const callbackURL = searchParams.get("next") || "/";
+  const callbackURL = searchParams.get("next") || "/dashboard";
 
   const [errors, setErrors] = useState<{ message: string }[]>([]);
 
@@ -105,7 +105,7 @@ export function LoginFormContent() {
             <form.SubscribeButton label="Login" />
           </form.AppForm>
           <FieldDescription className="text-center">
-            Don&apos;t have an account? <Link href="/sign-up">Sign up</Link>
+            Don&apos;t have an account? <Link href="/auth/sign-up">Sign up</Link>
           </FieldDescription>
         </Field>
       </FieldGroup>

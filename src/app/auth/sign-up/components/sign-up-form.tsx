@@ -59,7 +59,7 @@ export function SignUpForm({
         },
         {
           onSuccess: () => {
-            router.replace("/");
+            router.replace("/dashboard");
           },
           onError: (context) => {
             const message = context.error.message || "Something went wrong.";
@@ -141,7 +141,7 @@ export function SignUpForm({
                   <form.SubscribeButton label="Create Account" />
                 </form.AppForm>
                 <FieldDescription className="text-center">
-                  Already have an account? <Link href="/login">Sign in</Link>
+                  Already have an account? <Link href="/auth/login">Sign in</Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>

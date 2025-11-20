@@ -1,6 +1,7 @@
 "use client";
 
-import * as React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   SidebarGroup,
@@ -9,7 +10,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { INavItem } from "@/types/nav";
+import { isActive } from "../lib/nav";
+import { INavItem } from "../types/nav";
 
 export function NavSecondary({
   items,
@@ -17,17 +19,22 @@ export function NavSecondary({
 }: {
   items: INavItem[];
 } & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
+  const pathname = usePathname();
+
   return (
     <SidebarGroup {...props}>
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
-                <a href={item.href}>
+              <SidebarMenuButton
+                isActive={isActive(pathname, item.href)}
+                asChild
+              >
+                <Link href={item.href}>
                   <item.icon />
                   <span>{item.title}</span>
-                </a>
+                </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}

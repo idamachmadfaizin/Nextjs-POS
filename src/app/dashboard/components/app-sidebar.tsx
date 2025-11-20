@@ -22,7 +22,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { INav } from "@/types/nav";
+import { INav } from "../types/nav";
 import { NavMain } from "./nav-main";
 import { NavSecondary } from "./nav-secondary";
 import { NavUser } from "./nav-user";
@@ -49,7 +49,7 @@ const data: IData = {
         items: [
           {
             title: "Dashboard",
-            href: "/",
+            href: "/dashboard",
             icon: LucideHome,
           },
           {
@@ -66,12 +66,12 @@ const data: IData = {
         items: [
           {
             title: "Products",
-            href: "/products",
+            href: "/dashboard/products",
             icon: LucideArchive,
           },
           {
             title: "Categories",
-            href: "/categories",
+            href: "/dashboard/categories",
             icon: LucideBlocks,
           },
         ],
@@ -107,7 +107,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:p-1.5!"
             >
-              <Link href="/">
+              <Link href="/dashboard">
                 <LucideEgg className="size-5!" />
                 <span className="text-base font-semibold">
                   {process.env.NEXT_PUBLIC_APP_NAME}.
