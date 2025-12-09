@@ -1,12 +1,9 @@
-"use client";
-
 import { LucidePlus } from "lucide-react";
 
 import { AppHeader } from "@/components/app-header";
 import { Button } from "@/components/ui/button";
 import { ProductDataTable } from "./components/product-data-table";
 
-import data from "./product-data.json";
 
 export default function Page() {
   return (
@@ -18,7 +15,7 @@ export default function Page() {
         </Button>
       </AppHeader>
 
-      <ProductDataTable data={data as never} />
+      <ProductDataTable />
     </div>
   );
 }

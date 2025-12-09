@@ -1,3 +1,5 @@
+"use client"
+
 import {
   DataTable,
   DataTableColumnCellActions,
@@ -12,6 +14,8 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import z from "zod";
+
+import data from "../product-data.json";
 
 const schema = z.object({
   id: z.string(),
@@ -132,6 +136,7 @@ export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: "actions",
     header: "",
+    enableHiding: false,
     cell: (props) => (
       <DataTableColumnCellActions
         onView={() => console.log("onView", props.row.original)}
@@ -143,12 +148,9 @@ export const columns: ColumnDef<Product>[] = [
   },
 ];
 
-type Props = {
-  data?: Product[];
-};
-export function ProductDataTable({ data }: Props) {
+export function ProductDataTable() {
   const table = useReactTable({
-    data: data ?? [],
+    data: data,
     columns,
     initialState: {
       columnPinning: {

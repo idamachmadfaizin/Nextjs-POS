@@ -1,5 +1,6 @@
 [
     {
+        "id": "19cf66a5-acf4-4818-93d9-597d2610f5e6",
         "category": "ELEKTRONIK",
         "name": "Accusantium Incidunt",
         "sku": "SKU-YQL-28127",
@@ -10,6 +11,7 @@
         "netProfit": 11440
     },
     {
+        "id": "991bdc5e-b7b5-4100-9e5c-8b8d81ce531e",
         "category": "ELEKTRONIK",
         "name": "Minus Placeat",
         "sku": "SKU-WZR-73259",
@@ -20,6 +22,7 @@
         "netProfit": 40181
     },
     {
+        "id": "ffbe7599-9c37-4608-899a-192a3b954d5d",
         "category": "PAKAIAN",
         "name": "Excepturi Assumenda",
         "sku": "SKU-TES-50890",
@@ -30,6 +33,7 @@
         "netProfit": 40043
     },
     {
+        "id": "88a7b4a9-4b86-495d-88e6-59e68c0f779c",
         "category": "UMUM",
         "name": "Error Sapiente",
         "sku": "SKU-PJA-23488",
@@ -40,6 +44,7 @@
         "netProfit": 28257
     },
     {
+        "id": "93f80417-6274-4f41-9929-a054ce340ba9",
         "category": "MAKANAN",
         "name": "Nihil Voluptates",
         "sku": "SKU-HRC-66718",
@@ -50,6 +55,7 @@
         "netProfit": 1853
     },
     {
+        "id": "5bdafc1a-59a0-4ad4-a23c-8d0f15e3e1d7",
         "category": "MINUMAN",
         "name": "Minus Quaerat",
         "sku": "SKU-KRW-83716",
@@ -60,6 +66,7 @@
         "netProfit": 1001
     },
     {
+        "id": "d9ea1879-6266-4c7c-a81b-130a65b4bb54",
         "category": "ELEKTRONIK",
         "name": "Dicta Repellat",
         "sku": "SKU-EKU-90793",
@@ -70,6 +77,7 @@
         "netProfit": 27241
     },
     {
+        "id": "787aa759-c366-4816-944f-55d0057e61ac",
         "category": "MINUMAN",
         "name": "Eligendi Doloremque",
         "sku": "SKU-BRY-19904",
@@ -80,6 +88,7 @@
         "netProfit": 32516
     },
     {
+        "id": "9751e0d0-56c1-40e1-8b2b-026638a4be7a",
         "category": "UMUM",
         "name": "Non Dolorum",
         "sku": "SKU-QVU-17874",
@@ -90,6 +99,7 @@
         "netProfit": 1280
     },
     {
+        "id": "d4fd1147-c646-4bbe-880f-ea0318f3823b",
         "category": "UMUM",
         "name": "Iure Reprehenderit",
         "sku": "SKU-AUM-39068",
@@ -100,6 +110,7 @@
         "netProfit": 35962
     },
     {
+        "id": "7fd26095-d6cf-4109-ad61-33c1fcc1296d",
         "category": "MINUMAN",
         "name": "Vitae Possimus",
         "sku": "SKU-LTZ-64824",
@@ -110,6 +121,7 @@
         "netProfit": 35219
     },
     {
+        "id": "3b4891ba-20ab-4568-bdb3-4fca2555d163",
         "category": "PERLENGKAPAN",
         "name": "Ipsam Sunt",
         "sku": "SKU-VJZ-74442",
@@ -120,6 +132,7 @@
         "netProfit": 45056
     },
     {
+        "id": "8b443c3f-e35a-49df-a050-14dcc8bc524b",
         "category": "UMUM",
         "name": "Et Porro",
         "sku": "SKU-EQO-07292",
@@ -130,6 +143,7 @@
         "netProfit": 15401
     },
     {
+        "id": "ce2d695f-3a7c-4414-a5a8-563e2c6e523b",
         "category": "MAKANAN",
         "name": "Vitae Necessitatibus",
         "sku": "SKU-HQC-50328",
@@ -140,6 +154,7 @@
         "netProfit": 7879
     },
     {
+        "id": "f8435a96-724d-43d9-90ad-46cf5c8b1754",
         "category": "ELEKTRONIK",
         "name": "Mollitia Possimus",
         "sku": "SKU-CDP-31540",
@@ -150,6 +165,7 @@
         "netProfit": 49457
     },
     {
+        "id": "f8f1a896-161c-4d21-82a4-468329e8ac77",
         "category": "PERLENGKAPAN",
         "name": "Est Incidunt",
         "sku": "SKU-LPJ-22260",
@@ -160,6 +176,7 @@
         "netProfit": 34927
     },
     {
+        "id": "b9f7645f-e11b-4c42-9280-99115af4c37f",
         "category": "MAKANAN",
         "name": "Illo Enim",
         "sku": "SKU-RBK-04916",
@@ -170,6 +187,7 @@
         "netProfit": 12711
     },
     {
+        "id": "c88d16c6-aa8a-446f-8259-b251a06db5ea",
         "category": "UMUM",
         "name": "Dolorem Modi",
         "sku": "SKU-PCL-96891",
@@ -180,6 +198,7 @@
         "netProfit": 19055
     },
     {
+        "id": "354d1847-101d-47b0-9672-068fdf888f10",
         "category": "UMUM",
         "name": "Facere Quibusdam",
         "sku": "SKU-QTR-25292",
@@ -190,6 +209,7 @@
         "netProfit": 47146
     },
     {
+        "id": "2d13a818-75fc-41b6-99af-276bfdf266cf",
         "category": "UMUM",
         "name": "Mollitia Aspernatur",
         "sku": "SKU-GFD-59729",
@@ -200,6 +220,7 @@
         "netProfit": 32658
     },
     {
+        "id": "5d6396fd-f0f7-4c68-be90-3f74390ae460",
         "category": "PERLENGKAPAN",
         "name": "Aut Ducimus",
         "sku": "SKU-TBC-84529",
@@ -210,6 +231,7 @@
         "netProfit": 11377
     },
     {
+        "id": "9b3ef614-3211-4672-816c-0884baeed86e",
         "category": "ELEKTRONIK",
         "name": "Consequatur Corporis",
         "sku": "SKU-GZP-04556",
@@ -220,6 +242,7 @@
         "netProfit": 42868
     },
     {
+        "id": "4834fe41-3e48-4e37-a23c-4d275949b511",
         "category": "MAKANAN",
         "name": "Doloribus Facere",
         "sku": "SKU-SJV-07616",
@@ -230,6 +253,7 @@
         "netProfit": 42040
     },
     {
+        "id": "bec55982-9882-4e42-98db-7a243d682940",
         "category": "ELEKTRONIK",
         "name": "Neque Aut",
         "sku": "SKU-RLZ-60312",
@@ -240,6 +264,7 @@
         "netProfit": 37104
     },
     {
+        "id": "293ecac8-51cc-4d9a-8d0b-fc6294264468",
         "category": "MAKANAN",
         "name": "Sed In",
         "sku": "SKU-LUS-59292",
@@ -250,6 +275,7 @@
         "netProfit": 32601
     },
     {
+        "id": "acc59668-0f6a-4fdc-80e9-faabef2ade6e",
         "category": "MINUMAN",
         "name": "Perferendis Voluptatum",
         "sku": "SKU-ISR-01121",
@@ -260,6 +286,7 @@
         "netProfit": 42382
     },
     {
+        "id": "870ac481-5c26-4635-8146-ca4026898b91",
         "category": "MAKANAN",
         "name": "Sit Quos",
         "sku": "SKU-FWY-79468",
@@ -270,6 +297,7 @@
         "netProfit": 11963
     },
     {
+        "id": "2c0d407c-4534-4390-9885-6046bdf9931e",
         "category": "MINUMAN",
         "name": "Fugiat Dolore",
         "sku": "SKU-PAV-64768",
@@ -280,6 +308,7 @@
         "netProfit": 15989
     },
     {
+        "id": "f83e39d1-42f7-44e8-bb4d-f24fdda065fe",
         "category": "MAKANAN",
         "name": "Cum Facilis",
         "sku": "SKU-ZZL-48330",
@@ -290,6 +319,7 @@
         "netProfit": 47929
     },
     {
+        "id": "c00eb206-df2c-4d8e-942d-7215f13cad8f",
         "category": "PAKAIAN",
         "name": "Numquam Reprehenderit",
         "sku": "SKU-UEJ-50485",
@@ -300,6 +330,7 @@
         "netProfit": 47832
     },
     {
+        "id": "6479a10c-2558-476f-9113-037820299c2a",
         "category": "PAKAIAN",
         "name": "Similique Nihil",
         "sku": "SKU-MUK-22830",
@@ -310,6 +341,7 @@
         "netProfit": 31179
     },
     {
+        "id": "f43cfe1d-4fdb-4a43-9ae3-1439c13b2121",
         "category": "MAKANAN",
         "name": "Minima Ipsum",
         "sku": "SKU-AUM-30007",
@@ -320,6 +352,7 @@
         "netProfit": 21917
     },
     {
+        "id": "3880675c-6856-4784-9c9c-5ebeacafad98",
         "category": "PAKAIAN",
         "name": "Tempora Cum",
         "sku": "SKU-LKN-15452",
@@ -330,6 +363,7 @@
         "netProfit": 26335
     },
     {
+        "id": "f2389842-7db3-4f30-b1e0-a4300188b6b6",
         "category": "UMUM",
         "name": "Similique A",
         "sku": "SKU-MQR-58845",
@@ -340,6 +374,7 @@
         "netProfit": 18621
     },
     {
+        "id": "e891e72a-130f-4c0d-9ee9-795c24d5f74c",
         "category": "ELEKTRONIK",
         "name": "Nesciunt Cumque",
         "sku": "SKU-LEL-93241",
@@ -350,6 +385,7 @@
         "netProfit": 47273
     },
     {
+        "id": "80f7ad75-c4aa-4171-bf75-b060474ff3e9",
         "category": "UMUM",
         "name": "Quo Ipsa",
         "sku": "SKU-XMR-14730",
@@ -360,6 +396,7 @@
         "netProfit": 29671
     },
     {
+        "id": "2b955455-533d-493d-8ca2-df5ee96fccea",
         "category": "MAKANAN",
         "name": "Veritatis Minus",
         "sku": "SKU-KTA-26295",
@@ -370,6 +407,7 @@
         "netProfit": 13928
     },
     {
+        "id": "5c4dd230-e3e0-476b-af75-df5d58faf9d7",
         "category": "UMUM",
         "name": "Ex Consectetur",
         "sku": "SKU-MPS-54495",
@@ -380,6 +418,7 @@
         "netProfit": 37534
     },
     {
+        "id": "92ec0255-4258-4fb3-9f32-d08ac757bdc1",
         "category": "PAKAIAN",
         "name": "Sunt Dolore",
         "sku": "SKU-PSK-26435",
@@ -390,6 +429,7 @@
         "netProfit": 41198
     },
     {
+        "id": "fcdd221b-d1de-4770-b9e2-7d12635d0621",
         "category": "MAKANAN",
         "name": "Similique Eveniet",
         "sku": "SKU-WQZ-66784",
@@ -400,6 +440,7 @@
         "netProfit": 13668
     },
     {
+        "id": "13713ed8-92cb-4408-8c3b-6f3718b71c92",
         "category": "PERLENGKAPAN",
         "name": "Et Odio",
         "sku": "SKU-ZPT-30382",
@@ -410,6 +451,7 @@
         "netProfit": 2836
     },
     {
+        "id": "9968b09f-3c4d-41e4-ae78-28a15cf41492",
         "category": "ELEKTRONIK",
         "name": "Quidem Qui",
         "sku": "SKU-WXV-44750",
@@ -420,6 +462,7 @@
         "netProfit": 12368
     },
     {
+        "id": "e294241a-6881-4b84-a51c-a6cfa6de9adc",
         "category": "MINUMAN",
         "name": "Odit Blanditiis",
         "sku": "SKU-EQA-23983",
@@ -430,6 +473,7 @@
         "netProfit": 42468
     },
     {
+        "id": "a8568769-7549-4898-90fb-d789897c4030",
         "category": "UMUM",
         "name": "Facilis Incidunt",
         "sku": "SKU-JSY-73583",
@@ -440,6 +484,7 @@
         "netProfit": 17609
     },
     {
+        "id": "0490ffc4-2933-4ba6-8750-aba4b11c3e1e",
         "category": "UMUM",
         "name": "Suscipit Odio",
         "sku": "SKU-WWO-19238",
@@ -450,6 +495,7 @@
         "netProfit": 35620
     },
     {
+        "id": "d7ab9d28-f826-4cd3-8ecb-139cc071c10c",
         "category": "UMUM",
         "name": "Perspiciatis Illo",
         "sku": "SKU-GLY-15399",
@@ -460,6 +506,7 @@
         "netProfit": 42384
     },
     {
+        "id": "2d8af5c3-f001-4cd5-9d9f-e4c65afe679c",
         "category": "ELEKTRONIK",
         "name": "Nesciunt Vel",
         "sku": "SKU-PNU-79301",
@@ -470,6 +517,7 @@
         "netProfit": 22457
     },
     {
+        "id": "62430b5a-9676-4610-8d37-2a03eed031b1",
         "category": "UMUM",
         "name": "Explicabo Deleniti",
         "sku": "SKU-XOP-86259",
@@ -480,6 +528,7 @@
         "netProfit": 25632
     },
     {
+        "id": "69da4265-87ce-43d0-b4e6-bf20dc2632f4",
         "category": "PERLENGKAPAN",
         "name": "Saepe Maxime",
         "sku": "SKU-BNA-25483",
@@ -490,6 +539,7 @@
         "netProfit": 4632
     },
     {
+        "id": "b2b09848-7251-4c10-bc80-dfdb0f243c85",
         "category": "MAKANAN",
         "name": "Pariatur Ratione",
         "sku": "SKU-TQY-53877",
@@ -500,6 +550,7 @@
         "netProfit": 5069
     },
     {
+        "id": "39c032b9-23fc-4b23-afed-a3a6af76a941",
         "category": "MAKANAN",
         "name": "Delectus Consequuntur",
         "sku": "SKU-ANR-54033",
@@ -510,6 +561,7 @@
         "netProfit": 1454
     },
     {
+        "id": "2feaf432-8f82-4ed9-8faf-1d94289dd2bc",
         "category": "MINUMAN",
         "name": "Itaque Tempore",
         "sku": "SKU-PQL-37257",
@@ -520,6 +572,7 @@
         "netProfit": 8493
     },
     {
+        "id": "6edd097a-ea79-414d-9c69-5820928cfc79",
         "category": "PERLENGKAPAN",
         "name": "Consequatur Illo",
         "sku": "SKU-GPU-28625",
@@ -530,6 +583,7 @@
         "netProfit": 9070
     },
     {
+        "id": "1b517134-b81c-47a7-97a3-fec60f5e1a71",
         "category": "PERLENGKAPAN",
         "name": "Voluptatem Cum",
         "sku": "SKU-GFL-00770",
@@ -540,6 +594,7 @@
         "netProfit": 36495
     },
     {
+        "id": "805494e4-b9cd-457c-84a1-240fce922a53",
         "category": "UMUM",
         "name": "Quos Nulla",
         "sku": "SKU-RHZ-76409",
@@ -550,6 +605,7 @@
         "netProfit": 43380
     },
     {
+        "id": "9582edeb-854c-4ed5-a2ad-ac6b9748d199",
         "category": "UMUM",
         "name": "Nesciunt Ipsa",
         "sku": "SKU-JJH-25258",
@@ -560,6 +616,7 @@
         "netProfit": 11382
     },
     {
+        "id": "77bc0e23-9a03-4e34-9507-d5c96c9b05ad",
         "category": "PERLENGKAPAN",
         "name": "Perspiciatis Nemo",
         "sku": "SKU-IYS-32636",
@@ -570,6 +627,7 @@
         "netProfit": 48477
     },
     {
+        "id": "cc550e19-3070-4761-8458-a87bf65e1369",
         "category": "MINUMAN",
         "name": "Vitae Aliquid",
         "sku": "SKU-ZFL-67903",
@@ -580,6 +638,7 @@
         "netProfit": 16334
     },
     {
+        "id": "75a4944f-c6d5-4202-962a-39646ae5c245",
         "category": "PERLENGKAPAN",
         "name": "Placeat Nobis",
         "sku": "SKU-KAY-24778",
@@ -590,6 +649,7 @@
         "netProfit": 8806
     },
     {
+        "id": "6ba7c432-905e-4d6a-81d8-c4c0bbce8021",
         "category": "PERLENGKAPAN",
         "name": "Repellat Debitis",
         "sku": "SKU-TJY-72228",
@@ -600,6 +660,7 @@
         "netProfit": 42151
     },
     {
+        "id": "ffa54b40-029e-495b-aceb-cc7afd55a0dd",
         "category": "ELEKTRONIK",
         "name": "Harum Doloribus",
         "sku": "SKU-QTU-42779",
@@ -610,6 +671,7 @@
         "netProfit": 38133
     },
     {
+        "id": "74a4231b-2e1f-47ff-8ea6-01b5ead8ef3b",
         "category": "MINUMAN",
         "name": "Perspiciatis Officia",
         "sku": "SKU-UJD-58694",
@@ -620,6 +682,7 @@
         "netProfit": 29141
     },
     {
+        "id": "0fb212f2-5b29-4796-998f-0e50b04e654c",
         "category": "ELEKTRONIK",
         "name": "Libero Saepe",
         "sku": "SKU-MJU-05181",
@@ -630,6 +693,7 @@
         "netProfit": 3117
     },
     {
+        "id": "c4fb37cd-569e-47ac-9bc8-bbd642090c41",
         "category": "ELEKTRONIK",
         "name": "Suscipit Sint",
         "sku": "SKU-WWQ-03988",
@@ -640,6 +704,7 @@
         "netProfit": 2435
     },
     {
+        "id": "24086b3c-fe70-4e3c-a223-9e75f8655bd1",
         "category": "PERLENGKAPAN",
         "name": "Rem Aliquam",
         "sku": "SKU-XMM-33907",
@@ -650,6 +715,7 @@
         "netProfit": 18270
     },
     {
+        "id": "ccb81189-e24f-406c-9832-ff2678a403a7",
         "category": "PERLENGKAPAN",
         "name": "Officiis Tempore",
         "sku": "SKU-QFI-87102",
@@ -660,6 +726,7 @@
         "netProfit": 18538
     },
     {
+        "id": "52137319-2e69-4511-8cd2-aca00f46e010",
         "category": "PERLENGKAPAN",
         "name": "Iste Porro",
         "sku": "SKU-CCJ-82785",
@@ -670,6 +737,7 @@
         "netProfit": 31403
     },
     {
+        "id": "92f9a67d-e6a9-4a1f-b5ba-e0e24677bebc",
         "category": "ELEKTRONIK",
         "name": "Necessitatibus Ad",
         "sku": "SKU-SMD-69377",
@@ -680,6 +748,7 @@
         "netProfit": 34782
     },
     {
+        "id": "8bdfeaf3-7a2b-4851-83d4-03fdbef5c457",
         "category": "PERLENGKAPAN",
         "name": "Minus Quis",
         "sku": "SKU-PZO-54107",
@@ -690,6 +759,7 @@
         "netProfit": 9086
     },
     {
+        "id": "a30f13f7-a03c-4610-8435-dceedb20d553",
         "category": "PAKAIAN",
         "name": "Consectetur Nemo",
         "sku": "SKU-BNU-68805",
@@ -700,6 +770,7 @@
         "netProfit": 22616
     },
     {
+        "id": "9c64b46d-d1cb-4c2b-b171-00ed269c52ac",
         "category": "PAKAIAN",
         "name": "Suscipit Labore",
         "sku": "SKU-SKU-34963",
@@ -710,6 +781,7 @@
         "netProfit": 17601
     },
     {
+        "id": "0ac38ad7-b8c8-42d2-9962-1b549f4c123e",
         "category": "PERLENGKAPAN",
         "name": "Consequuntur Totam",
         "sku": "SKU-KFZ-09179",
@@ -720,6 +792,7 @@
         "netProfit": 1130
     },
     {
+        "id": "b9ccf2ad-67d9-4017-8824-4149b61067ab",
         "category": "MAKANAN",
         "name": "Inventore Excepturi",
         "sku": "SKU-VAK-96686",
@@ -730,6 +803,7 @@
         "netProfit": 33578
     },
     {
+        "id": "e0d17505-db08-4725-b5b1-252cace81398",
         "category": "PERLENGKAPAN",
         "name": "Earum Magnam",
         "sku": "SKU-VBA-20160",
@@ -740,6 +814,7 @@
         "netProfit": 1504
     },
     {
+        "id": "2f739925-ae42-486c-a4d3-1b12c82faa8d",
         "category": "UMUM",
         "name": "Ipsum Consectetur",
         "sku": "SKU-JYT-03491",
@@ -750,6 +825,7 @@
         "netProfit": 32195
     },
     {
+        "id": "744e5f97-c6d7-4fbc-88ff-1ce4c68e0264",
         "category": "MINUMAN",
         "name": "Culpa Distinctio",
         "sku": "SKU-ZNF-19082",
@@ -760,6 +836,7 @@
         "netProfit": 48498
     },
     {
+        "id": "5ff65ed5-b470-47a3-a408-2221eca5d16e",
         "category": "PERLENGKAPAN",
         "name": "Ab Earum",
         "sku": "SKU-ZAN-25988",
@@ -770,6 +847,7 @@
         "netProfit": 27638
     },
     {
+        "id": "2f336041-ba46-4a65-8d2a-57d83d7534fa",
         "category": "MINUMAN",
         "name": "Minus Dolorum",
         "sku": "SKU-VYJ-93891",
@@ -780,6 +858,7 @@
         "netProfit": 22106
     },
     {
+        "id": "2c7cec04-2bef-41c2-87b8-f36d9247b74d",
         "category": "PAKAIAN",
         "name": "Tempora At",
         "sku": "SKU-AYO-42818",
@@ -790,6 +869,7 @@
         "netProfit": 10266
     },
     {
+        "id": "8f017fcf-b37d-45bd-a5e6-12c9432d39f2",
         "category": "ELEKTRONIK",
         "name": "Similique Praesentium",
         "sku": "SKU-PRC-96120",
@@ -800,6 +880,7 @@
         "netProfit": 3014
     },
     {
+        "id": "4b1b63b1-a3ee-4239-b1fb-7541ab228f77",
         "category": "ELEKTRONIK",
         "name": "Illum Cupiditate",
         "sku": "SKU-QRP-84987",
@@ -810,6 +891,7 @@
         "netProfit": 34338
     },
     {
+        "id": "029943fa-6567-4d57-ac25-56ec02434904",
         "category": "PAKAIAN",
         "name": "Omnis Hic",
         "sku": "SKU-DMX-05466",
@@ -820,6 +902,7 @@
         "netProfit": 37115
     },
     {
+        "id": "339c37b7-c0a1-4b62-ae93-79ba86af0baf",
         "category": "ELEKTRONIK",
         "name": "Quo Quaerat",
         "sku": "SKU-MQD-82318",
@@ -830,6 +913,7 @@
         "netProfit": 1156
     },
     {
+        "id": "c2a1dd90-fd22-41d2-b70e-4a0af4572337",
         "category": "MAKANAN",
         "name": "Laborum Quos",
         "sku": "SKU-GTW-91948",
@@ -840,6 +924,7 @@
         "netProfit": 39047
     },
     {
+        "id": "2cd8bccd-34e2-498a-8eb6-6e03b97a71b3",
         "category": "PERLENGKAPAN",
         "name": "Tenetur Quis",
         "sku": "SKU-KZX-02761",
@@ -850,6 +935,7 @@
         "netProfit": 35357
     },
     {
+        "id": "22c8411b-39cf-43e4-aac7-a6a34102c5a4",
         "category": "PAKAIAN",
         "name": "Reprehenderit Atque",
         "sku": "SKU-LBX-03236",
@@ -860,6 +946,7 @@
         "netProfit": 28872
     },
     {
+        "id": "edfbf8a7-5be1-4d23-9a39-8ed0416e820f",
         "category": "PAKAIAN",
         "name": "Dolor Expedita",
         "sku": "SKU-FHM-79707",
@@ -870,6 +957,7 @@
         "netProfit": 26314
     },
     {
+        "id": "da55e2e5-60f7-4cc5-a1b0-f3bd81563d7c",
         "category": "MINUMAN",
         "name": "Repellendus Sunt",
         "sku": "SKU-AAN-42343",
@@ -880,6 +968,7 @@
         "netProfit": 45925
     },
     {
+        "id": "4327e45a-882a-43ca-b06a-f311c2028c73",
         "category": "MAKANAN",
         "name": "Aliquam Enim",
         "sku": "SKU-SRB-47356",
@@ -890,6 +979,7 @@
         "netProfit": 18285
     },
     {
+        "id": "33fb5058-9261-4042-b088-90eb24b59b7b",
         "category": "MINUMAN",
         "name": "Unde Illum",
         "sku": "SKU-QOM-05202",
@@ -900,6 +990,7 @@
         "netProfit": 40440
     },
     {
+        "id": "6a7ceae8-3702-4f29-8d6e-a13631e92240",
         "category": "MINUMAN",
         "name": "Soluta Eveniet",
         "sku": "SKU-SVE-26646",
@@ -910,6 +1001,7 @@
         "netProfit": 2592
     },
     {
+        "id": "514d2aca-3967-427e-b7ea-c96eb8ba07f6",
         "category": "PAKAIAN",
         "name": "Aperiam Eum",
         "sku": "SKU-ZXF-72738",
@@ -920,6 +1012,7 @@
         "netProfit": 9417
     },
     {
+        "id": "0ec8f41d-d9d2-40c3-9044-1c1ce01f603f",
         "category": "PERLENGKAPAN",
         "name": "Facilis Rerum",
         "sku": "SKU-UWX-31611",
@@ -930,6 +1023,7 @@
         "netProfit": 43179
     },
     {
+        "id": "396c94c7-44c1-4769-b05e-5ea77b2de978",
         "category": "MINUMAN",
         "name": "Eius Sint",
         "sku": "SKU-SMT-49993",
@@ -940,6 +1034,7 @@
         "netProfit": 21749
     },
     {
+        "id": "b5db74db-4b65-45b6-97c5-634e76b955e2",
         "category": "PERLENGKAPAN",
         "name": "Animi Facilis",
         "sku": "SKU-IBW-15953",
@@ -950,6 +1045,7 @@
         "netProfit": 3109
     },
     {
+        "id": "ffe479ff-7029-47b0-b210-b59c11da7881",
         "category": "PERLENGKAPAN",
         "name": "Aliquid Harum",
         "sku": "SKU-THP-17621",
@@ -960,6 +1056,7 @@
         "netProfit": 7976
     },
     {
+        "id": "e08f56e5-7842-4498-8815-5a6053f9a9ec",
         "category": "PERLENGKAPAN",
         "name": "Ea Repellat",
         "sku": "SKU-ERZ-64293",
@@ -970,6 +1067,7 @@
         "netProfit": 21385
     },
     {
+        "id": "0ca833c3-410c-4800-886d-61433780b146",
         "category": "UMUM",
         "name": "Assumenda Non",
         "sku": "SKU-FGH-24938",
@@ -980,6 +1078,7 @@
         "netProfit": 26261
     },
     {
+        "id": "def8f41e-1f79-4ea1-8bc9-443be08b55e0",
         "category": "ELEKTRONIK",
         "name": "Aut Eum",
         "sku": "SKU-RES-55344",
@@ -990,6 +1089,7 @@
         "netProfit": 28274
     },
     {
+        "id": "1e7c03d4-5f6a-4be7-9f9f-9c50f0918871",
         "category": "PERLENGKAPAN",
         "name": "Officia Culpa",
         "sku": "SKU-RMP-22512",
