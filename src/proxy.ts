@@ -1,12 +1,14 @@
-import { getSessionCookie } from "better-auth/cookies";
 import { NextRequest, NextResponse } from "next/server";
+import { auth } from "./app/auth/lib/auth";
 
-export function proxy(request: NextRequest) {
-  const sessionCookie = getSessionCookie(request);
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const session = await auth.api.getSession({
+    headers: request.headers,
+  });
 
   // Unauthorized
-  if (!sessionCookie && !pathname.startsWith("/auth")) {
+  if (!session && !pathname.startsWith("/auth")) {
     const loginUrl = new URL("/auth/login", request.url);
 
     if (pathname !== "/") {
@@ -17,7 +19,7 @@ export function proxy(request: NextRequest) {
   }
 
   // Authorized but trying to access auth pages
-  if (sessionCookie && pathname.startsWith("/auth")) {
+  if (session && pathname.startsWith("/auth")) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
