@@ -45,4 +45,7 @@ next-env.d.ts
 .idx
 firebase-debug.log
 .databases
+
+# Prisma
 /src/generated/prisma
+dev.db
