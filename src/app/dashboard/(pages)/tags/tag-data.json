@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1e9c1f53-9921-4b8d-a8be-20c4acdb51b5",
+    "name": "Technology",
+    "createdAt": "2025-01-01T10:00:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "55fa54e9-80cb-4f53-bcf3-9cb08bdf2a62",
+    "name": "Design",
+    "createdAt": "2025-01-01T10:01:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "8ddcb53a-839e-4f4a-a944-b16990dd9b84",
+    "name": "Marketing",
+    "createdAt": "2025-01-01T10:02:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "3b8a5fa1-77cf-4bbb-a6e6-b0ba33db9c4b",
+    "name": "Finance",
+    "createdAt": "2025-01-01T10:03:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "cdb7aaf3-3810-4c2c-9e4b-5ce9b7b2f0bb",
+    "name": "Education",
+    "createdAt": "2025-01-01T10:04:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "2d324ecb-0b6f-4ca0-b3a7-243049d16bc3",
+    "name": "Health",
+    "createdAt": "2025-01-01T10:05:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "74f9b9e4-2f07-4cc0-9e38-94d700db4724",
+    "name": "Travel",
+    "createdAt": "2025-01-01T10:06:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "f66a8bcf-6f5b-4a94-96fc-388cd442e761",
+    "name": "Food",
+    "createdAt": "2025-01-01T10:07:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "9cf9bb54-7e23-4a15-a1ac-cbaf54c98c46",
+    "name": "Art",
+    "createdAt": "2025-01-01T10:08:00.000Z",
+    "deletedAt": null
+  },
+  {
+    "id": "5b41075b-28b7-4b1f-a9e0-f13be27d6bd9",
+    "name": "Science",
+    "createdAt": "2025-01-01T10:09:00.000Z",
+    "deletedAt": null
+  }
+]

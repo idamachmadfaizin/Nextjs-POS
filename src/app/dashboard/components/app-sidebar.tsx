@@ -70,6 +70,11 @@ const data: IData = {
             icon: LucideArchive,
           },
           {
+            title: "Tags",
+            href: "/dashboard/tags",
+            icon: LucideBlocks,
+          },
+          {
             title: "Categories",
             href: "/dashboard/categories",
             icon: LucideBlocks,
