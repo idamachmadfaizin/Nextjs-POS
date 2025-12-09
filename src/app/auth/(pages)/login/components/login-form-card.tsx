@@ -1,5 +1,7 @@
 "use client";
 
+import { Suspense } from "react";
+
 import {
   Card,
   CardContent,
@@ -10,7 +12,6 @@ import {
 import { FieldDescription } from "@/components/ui/field";
 import { cn } from "@/lib/utils";
 import { LoginFormContent } from "./login-form-content";
-import { Suspense } from "react";
 import { LoginFormContentSkeleton } from "./login-form-content-skeleton";
 
 export function LoginFormCard({
