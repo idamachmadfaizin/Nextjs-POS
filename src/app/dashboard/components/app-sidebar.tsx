@@ -9,6 +9,7 @@ import {
   LucideHome,
   LucideSearch,
   LucideSettings,
+  LucideTag,
 } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
@@ -72,7 +73,7 @@ const data: IData = {
           {
             title: "Tags",
             href: "/dashboard/tags",
-            icon: LucideBlocks,
+            icon: LucideTag,
           },
           {
             title: "Categories",

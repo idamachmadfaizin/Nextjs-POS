@@ -1,12 +1,6 @@
 "use client";
 
 import {
-  DataTable,
-  DataTableColumnCellActions,
-  DataTableColumnHeader,
-} from "@/components/ui/data-table";
-import { gqlClient } from "@/lib/graphql";
-import {
   ColumnDef,
   getCoreRowModel,
   getPaginationRowModel,
@@ -17,6 +11,14 @@ import { gql } from "graphql-request";
 import { useEffect, useState } from "react";
 import z from "zod";
 
+import {
+  DataTable,
+  DataTableColumnCellActions,
+  DataTableColumnHeader,
+} from "@/components/ui/data-table";
+import { Tag } from "@/generated/prisma/client";
+import { gqlClient } from "@/lib/graphql";
+
 const schema = z.object({
   id: z.string(),
   name: z.string(),
@@ -24,8 +26,6 @@ const schema = z.object({
   updatedAt: Date,
   deletedAt: Date,
 });
-
-type Tag = z.infer<typeof schema>;
 
 export const columns: ColumnDef<Tag>[] = [
   {
@@ -62,7 +62,6 @@ export function TagDataTable() {
   const [data, setData] = useState<Tag[]>([]);
 
   useEffect(() => {
-    console.log("tags onload");
     gqlClient.request(document).then((res) => setData(res.tags));
   }, []);
 
